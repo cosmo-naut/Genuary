@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji&family=Roboto+Mono&display=swap');
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+    color: beige;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame-container {
+    display: flex;
+    align-items: center;
+}
+
+#frame {
+    background-color: whitesmoke;
+    border: 18px ridge burlywood;
+    margin: 20px;
+    padding: 25px;
+}
+
+button {
+    padding: 6px;
+    background-color: rgb(70, 70, 70);
+    border: 3px solid burlywood;
+    color: beige;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+button:active {
+    background-color: rgb(133, 133, 133);
+}
+
+.weight {
+    height: 20vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100vw;
+}
+
+a {
+    color: beige;
+}
+
+.emoji {
+    font-family: 'Noto Emoji', sans-serif;
+}
+
+.left:hover {
+    position: relative;
+    right: 4px;
+    /* transform: rotate(-10deg); */
+}
+
+.right:hover {
+    position: relative;
+    left: 4px;
+    /* transform: rotate(10deg); */
+}
