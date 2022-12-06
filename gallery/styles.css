@@ -9,24 +9,28 @@ body {
     user-select: none;
 }
 
-.container {
-    height: 100%;
+.hbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vbox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.frame-container {
-    display: flex;
-    align-items: center;
+.main {
+    height: 100%;
+    justify-content: center;
 }
 
 #frame {
     background-color: whitesmoke;
-    border: 18px ridge burlywood;
+    border: 20px ridge burlywood;
     margin: 20px;
-    padding: 25px;
+    padding: 40px;
 }
 
 button {
@@ -47,6 +51,10 @@ button:active {
 
 .weight {
     height: 20vh;
+}
+
+h1 {
+    margin: 20px;
 }
 
 .footer {
@@ -75,4 +83,8 @@ a {
     position: relative;
     left: 4px;
     /* transform: rotate(10deg); */
+}
+
+.roll:hover {
+    transform: rotate(180deg);
 }
