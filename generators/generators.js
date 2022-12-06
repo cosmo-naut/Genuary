@@ -1,6 +1,7 @@
+import day0 from "./00-test/test.js";
 
 const allGenerators = () => {
-    return [];
+    return [ day0, ];
 }
 
 export default allGenerators();

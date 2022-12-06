@@ -18,6 +18,7 @@ new p5((p5) => {
 let currentDay = 0;
 let day = 0;
 
+regenerate();
 
 function regenerate() {
     generators[day].regenerate()
