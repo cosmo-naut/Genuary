@@ -1,5 +1,4 @@
 # GENUARY 2023
-### Aidan Sean Tesselaar 🦘
 
 [Made using p5](https://p5js.org/), make sure you run `npm install`
 
