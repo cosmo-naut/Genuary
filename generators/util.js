@@ -4,6 +4,9 @@ export const randomIntBetween = (min, max) => {
 export const randomBetween = (min, max) => {
     return (Math.random() * (max - min)) + min;
 }
+export const randomItem = (arr) => {
+    return arr[randomIntBetween(0, arr.length)];
+}
 export const distanceSquared = (x1, y1, x2, y2) => {
     const a = x1 - x2;
     const b = y1 - y2;
