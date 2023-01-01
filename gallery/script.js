@@ -14,12 +14,17 @@ new p5((p5) => {
     }
 });
 
+const regenerate = () => {
+    generators[day].regenerate()
+    updateHeading();
+}
 
-let currentDay = 0;
-let day = 0;
+const updateHeading = () => {
+    const heading = document.getElementById("pageHeading");
+    heading.innerText = `${day} - ${generators[day].prompt}`
+}
+
+
+let day = 1;
 
 regenerate();
-
-function regenerate() {
-    generators[day].regenerate()
-}

@@ -101,5 +101,6 @@ export default {
             //p5.text(i, c.x, c.y - 20);
         });
         
-    }
+    },
+    prompt : "Constellation"
 }
