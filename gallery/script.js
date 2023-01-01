@@ -7,6 +7,7 @@ new p5((p5) => {
         canvas.parent("frame");
 
         document.getElementsByClassName("roll")[0].addEventListener("click", regenerate);
+        generators[day].setup(p5);
     }
 
     p5.draw = () => {
@@ -15,7 +16,7 @@ new p5((p5) => {
 });
 
 const regenerate = () => {
-    generators[day].regenerate()
+    generators[day].regenerate();
     updateHeading();
 }
 

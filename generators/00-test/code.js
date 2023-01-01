@@ -70,6 +70,9 @@ const generateConnections = (stars, distances, count) => {
 }
 
 export default {
+    setup : (p5) => {
+        
+    },
     regenerate : () => {
         // data.stars = generateStars(randomIntBetween(MIN_CIRCLES, MAX_CIRCLES));
         data.stars = generateStars(35);
