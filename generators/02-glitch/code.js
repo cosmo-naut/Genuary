@@ -50,6 +50,13 @@ const fillSubBox = (xPos, yPos, col) =>
 const makeCutout = () =>
 {
     const cutout = randomItem(cutouts);
+    for (let x = 0; x < cutout[0]; x++)
+    {
+        for (let y = 0; y < cutout[1]; y++)
+        {
+            fillSubBox(x,y,white);
+        }
+    }
 
 }
 
