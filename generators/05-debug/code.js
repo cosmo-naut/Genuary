@@ -106,8 +106,6 @@ export default {
                 }
             }
 
-            
-
             m.places.push({x: x, y: y, c: c});
         })
     },

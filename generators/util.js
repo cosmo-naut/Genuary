@@ -25,3 +25,7 @@ export const getLastX = (arr, x) =>
     }
     return newArr;
 }
+export const getColour = (p5, c) =>
+{
+    return p5.color(c.rgb[0], c.rgb[1], c.rgb[2]);
+}
