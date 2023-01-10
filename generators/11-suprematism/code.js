@@ -13,10 +13,10 @@ const addShape = () =>
 
 const createTrapezoid = () =>
 {
-    const x = randomBetween(0, 512);
-    const y = randomBetween(0, 512);
-    const l = randomBetween(30, 180);
-    const w = randomBetween(30, 180);
+    const x = randomBetween(0, 512) + randomItem([-512,512]);
+    const y = randomBetween(0, 512)
+    const l = randomBetween(60, 180);
+    const w = randomBetween(60, 180);
 
     const x2 = x + w
     const y2 = y;
@@ -27,10 +27,12 @@ const createTrapezoid = () =>
     const x4 = x3 - w;
     const y4 = y3;
 
-    let xSpeed = randomBetween(-1, 1);
+    let xSpeed = randomBetween(0.3, 1);
+    if (x > 0)
+        xSpeed *= -1;
+
     let ySpeed = 0;
-    if (Math.abs(xSpeed) < 0.3)
-        xSpeed *= 2;
+
     if (Math.random() > 0.5)
     {
         ySpeed = Math.cos(Math.PI / 3) * xSpeed;
@@ -38,9 +40,10 @@ const createTrapezoid = () =>
     }
 
     const colour = colours[randomIntBetween(1, 4)];
-    const alpha = randomItem(["66","77","88","99","aa","bb","cc"])
+    const alpha = randomItem(["88","99","aa","bb","cc","dd","ee","ff"])
+    const line = Math.random() > 0.8? true: false;
 
-    return { s: "Trap", x: [x,x2,x3,x4], y: [y,y2,y3,y4], xS: xSpeed, yS: ySpeed, c: colour, a: alpha};
+    return { s: "Trap", x: [x,x2,x3,x4], y: [y,y2,y3,y4], xS: xSpeed, yS: ySpeed, c: colour, a: alpha, l: line};
 }
 
 const flip = (n) =>
@@ -56,11 +59,20 @@ export default {
         addShape();
     },
     draw : (p5) => {
+        if (Math.random() > 0.96)
+            addShape();
+
         p5.background(colours[0]);
-        p5.noStroke();
         
         data.shapes.forEach(s => {
-            p5.fill(s.c)
+            p5.fill(s.c + s.a)
+            p5.stroke(s.c + s.a)
+            p5.strokeWeight(5);
+
+            if (s.l)
+                p5.noFill();
+            else
+                p5.noStroke();
 
             if (s.s === "Trap")
             {
