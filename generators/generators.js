@@ -7,9 +7,10 @@ import day5 from "./05-debug/code.js";
 import day6 from "./06-steal/code.js";
 import day7 from "./07-sample/code.js";
 import day9 from "./09-plants/code.js";
+import day10 from "./10-suprematism/code.js";
 
 const allGenerators = () => {
-    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9];
+    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9, day10];
 }
 
 export default allGenerators();
