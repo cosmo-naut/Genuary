@@ -12,6 +12,11 @@ export const distanceSquared = (x1, y1, x2, y2) => {
     const b = y1 - y2;
     return (a*a + b*b);
 }
+export const distance = (x1, y1, x2, y2) => {
+    const a = x1 - x2;
+    const b = y1 - y2;
+    return Math.sqrt(a*a + b*b);
+}
 export const getLast = (arr) =>
 {
     return arr[arr.length-1];
@@ -28,4 +33,14 @@ export const getLastX = (arr, x) =>
 export const getColour = (p5, c) =>
 {
     return p5.color(c.rgb[0], c.rgb[1], c.rgb[2]);
+}
+export const lerp = (value1, value2, amount) =>
+{
+    amount = amount < 0 ? 0 : amount;
+    amount = amount > 1 ? 1 : amount;
+    return value1 + (value2 - value1) * amount;
+}
+export const angleBetween = (x1, y1, x2, y2) =>
+{
+    return Math.atan2(y2-y1, x2-x1);
 }
