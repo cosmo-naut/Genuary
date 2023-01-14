@@ -44,3 +44,11 @@ export const angleBetween = (x1, y1, x2, y2) =>
 {
     return Math.atan2(y2-y1, x2-x1);
 }
+export const clamp = (val, min, max) =>
+{
+    if (val < min)  
+        return min;
+    if (val > max)
+        return max;
+    return val;
+}
