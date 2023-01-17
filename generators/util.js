@@ -52,3 +52,11 @@ export const clamp = (val, min, max) =>
         return max;
     return val;
 }
+export const isBetween = (val, min, max) =>
+{
+    if (val < min)  
+        return false;
+    if (val > max)
+        return false;
+    return true;
+}
