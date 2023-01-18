@@ -26,6 +26,6 @@ const updateHeading = () => {
 }
 
 
-let day = 18;
+let day = 19;
 
 regenerate();
