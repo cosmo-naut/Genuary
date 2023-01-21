@@ -16,9 +16,10 @@ import day16 from "./16-reflection/code.js";
 import day17 from "./17-grids/code.js";
 import day18 from "./18-not-a-grid/code.js";
 import day19 from "./19-black-and-white/code.js";
+import day20 from "./20-art-deco/code.js";
 
 const allGenerators = () => {
-    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9, null, day11, day12, day13, day14, day15, day16, day17, day18, day19];
+    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9, null, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20];
 }
 
 export default allGenerators();
