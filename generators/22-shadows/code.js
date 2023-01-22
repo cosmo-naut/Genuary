@@ -12,8 +12,8 @@ export default {
     },
     draw : (p5) => {
         p5.noStroke();
-        p5.background(255);
-        p5.fill(43)
+        p5.background(43);
+        p5.fill(255)
         const segment = p5.TAU / segmentCount;
         for (let i = 0; i < segmentCount; i++)
         {
@@ -24,7 +24,7 @@ export default {
             p5.triangle(256,256, 256+Math.sin(val) * length, 256+Math.cos(val) * length, 256+Math.sin(val+segment) * nextLength, 256+Math.cos(val+segment) * nextLength);
         }
 
-        p5.fill(0)
+        p5.fill(43)
         p5.circle(256,256,100);
         p5.circle(256,346,80);
         p5.circle(256,416,60);
