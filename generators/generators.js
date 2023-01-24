@@ -20,9 +20,10 @@ import day20 from "./20-art-deco/code.js";
 import day22 from "./22-shadows/code.js";
 import day23 from "./23-moire/code.js";
 import day24 from "./24-textile/code.js";
+import day25 from "./25-yayoi-kusama/code.js";
 
 const allGenerators = () => {
-    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9, null, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, null, day22, day23, day24];
+    return [ day0, day1, day2, day3, day4, day5, day6, day7, null, day9, null, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, null, day22, day23, day24, day25];
 }
 
 export default allGenerators();
