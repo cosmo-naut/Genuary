@@ -2,6 +2,11 @@ import generators from "../generators/generators.js";
 const backgroundColour = 34;
 
 new p5((p5) => {
+    p5.preload = () => {
+        const fonts = {};
+        fonts.emoji = p5.loadFont("../assets/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf")
+        p5.fonts = fonts;
+    }
     p5.setup = () => {
         const canvas = p5.createCanvas(512, 512);
         canvas.parent("frame");
@@ -26,6 +31,6 @@ const updateHeading = () => {
 }
 
 
-let day = 27;
+let day = 28;
 
 regenerate();
