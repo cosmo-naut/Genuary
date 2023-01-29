@@ -23,30 +23,15 @@ export default {
         
     },
     draw : (p5) => {
-        p5.background(p5.color(colours[0]));
+        p5.background(43);
         p5.noStroke();
         
 
         
-        const step = 512 / count;
-        p5.translate(step/2,step/2)
-        
-        for  (let x = 0; x < count; x++)
-        {
-            for  (let y = 0; y < count; y++)
-            {
-                const value = Math.floor(p5.noise(x * 0.5,y * 0.5, p5.frameCount * 0.001) * 4) + 1;
-
-                for (let i = 0; i < value; i++)
-                {
-                    p5.fill(p5.color(colours[i+1]))
-                    p5.circle(x * step, y * step, step - (i * 5))
-                }
-            }
-        }
-
-        p5.fill(p5.color("#00FF00"))
-        p5.circle(12 * step,12 * step,10)
+        p5.fill(255);
+        p5.circle(256,256,400 + p5.noise(0,0,p5.frameCount) * 20)
+        p5.fill(43);
+        p5.circle(256,256,300 + p5.noise(0,0,p5.frameCount + 5) * 20)
         
     },
     prompt : "Minimalism"
