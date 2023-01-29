@@ -60,3 +60,12 @@ export const isBetween = (val, min, max) =>
         return false;
     return true;
 }
+export const lerpColourArray = (p5, array, value) =>
+{
+    const colIndex = Math.floor((value) * array.length)
+
+    const c1 = p5.color(array[colIndex]);
+    const c2 = p5.color(array[Math.min(colIndex + 1, array.length - 1)]);
+
+    return (p5.lerpColor(c1, c2, ((value) * array.length) % 1))
+}
